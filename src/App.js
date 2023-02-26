@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 
 function App() {
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-[#535353] text-white h-screen">
+      <Navbar />
+
+      {/* {HERO} */}
+      <section id='hero'>
+        <Hero />
+      </section>
+
+      {/* {About} */}
+      <section id='about'>
+
+      </section>
+
+      {/* {Projects} */}
+      <section id='projects'>
+
+      </section>
+
+      {/* {Experience} */}
+      <section id='experience'>
+
+      </section>
+
+      {/* {Contact} */}
+      <section id='contact'>
+
+      </section>
     </div>
   );
-}
+};
+
 
 export default App;
