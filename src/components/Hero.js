@@ -13,7 +13,7 @@ function Hero() {
     <div>
       <h1>
         <span>{text}</span>
-        <Cursor cursorColor='#add8e6'/>
+        <Cursor cursorColor='white'/>
       </h1>
     </div>
   )

@@ -27,14 +27,14 @@ function Navbar() {
       >
         <SocialIcon
           url='https://github.com/DlonMusk'
-          fgColor='black'
+          fgColor='#434854'
           bgColor='transparent'
           label='GitHub'
         />
         <SocialIcon
           className='cursor-pointer'
           network='email'
-          fgColor='black'
+          fgColor='#434854'
           bgColor='transparent'
         />
       </motion.div>
@@ -77,8 +77,11 @@ function Navbar() {
         }}
         className='flex-row space-x-4 sm:hidden'
       >
+        {
+          //  w-6 h-6 ${ isOpen ? 'text-[#43485480]' : 'text-[#434854]'}
+        }
         <GiHamburgerMenu
-          className={`w-6 h-6 ${ isOpen ? 'text-[#82e0ff]' : 'text-[#57d5ff]'}`}
+          className={` w-6 h-6 text-[#434854] focus:opacity-100 active:opacity-50 transition-opacity duration-1000`}
           onClick={() => setIsOpen(!isOpen)}
         />
 
@@ -100,7 +103,10 @@ function Navbar() {
             }}
           >
             <div className='w-50'>
-              <ul className='border rounded-lg border-solid border-cyan-300 p-3 text-center'>
+              {
+                // TODO: style this more appropriately
+              }
+              <ul className='border rounded-lg border-solid border-white p-3 text-center'>
                 <li>Projects</li>
                 <li>Experience</li>
                 <li>Algo Expert</li>
