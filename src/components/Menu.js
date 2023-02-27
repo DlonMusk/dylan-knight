@@ -66,18 +66,19 @@ function Menu() {
                         opacity: 0,
                     }}
                     animate={{
-                        y: (isOpen ? 0 : -250),
+                        y: (isOpen ? 0 : -280),
                         opacity: 0.5,
                     }}
                     transition={{
                         duration: 1
                     }}
                 >
-                    <div className='flex flex-col text-black text-center text-[25px] font-tilt-prism items-center p-2 pb-5 space-y-2'>
+                    <div className='flex flex-col text-black text-center tracking-[8px] text-[25px] font-tilt-prism items-center p-2 pb-5 space-y-2'>
                         <HiBarsArrowUp className='h-8 w-8 mt-3' onClick={() => setIsOpen(!isOpen)} />
-                        <a className='border-b border-gray-50' href=""><h1>Projects</h1></a>
-                        <a className='border-b border-gray-50' href=""><h1>Experience</h1></a>
-                        <a className='border-b border-gray-50' href=""><h1>Algo Expert</h1></a>
+                        <a className='border-b border-gray-50' href="hero"><h1>Projects</h1></a>
+                        <a className='border-b border-gray-50' href="about"><h1>Experience</h1></a>
+                        <a className='border-b border-gray-50' href="projects"><h1>Algo Expert</h1></a>
+                        <a className='border-b border-gray-50' href="experience"><h1>Contact Me</h1></a>
                     </div>
                 </motion.div>
             </motion.div>

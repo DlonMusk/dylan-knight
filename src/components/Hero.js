@@ -1,5 +1,6 @@
 import React from 'react'
 import { Cursor, Typewriter, useTypewriter } from 'react-simple-typewriter'
+import HeroAnimations from './HeroAnimations'
 
 function Hero() {
 
@@ -10,8 +11,9 @@ function Hero() {
   })
 
   return (
-    <div>
+    <div className="h-screen">
       <h1>
+        <HeroAnimations />
         <span>{text}</span>
         <Cursor cursorColor='white'/>
       </h1>

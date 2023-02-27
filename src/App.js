@@ -1,4 +1,5 @@
 import React from "react";
+import About from "./components/About";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
@@ -6,31 +7,31 @@ function App() {
   
 
   return (
-    <div className="bg-[#8BC6FC] text-white h-screen">
+    <div className="bg-[#8BC6FC] text-white snap-y h-screen snap-mandatory overflow-scroll">
       <Navbar />
 
       {/* {HERO} */}
-      <section id='hero'>
+      <section className="snap-center" id='hero'>
         <Hero />
       </section>
 
       {/* {About} */}
-      <section id='about'>
-
+      <section className="snap-center" id='about'>
+        <About />
       </section>
 
       {/* {Projects} */}
-      <section id='projects'>
+      <section className="snap-center" id='projects'>
 
       </section>
 
       {/* {Experience} */}
-      <section id='experience'>
+      <section className="snap-center" id='experience'>
 
       </section>
 
       {/* {Contact} */}
-      <section id='contact'>
+      <section className="snap-center" id='contact'>
 
       </section>
     </div>
