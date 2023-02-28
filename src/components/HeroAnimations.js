@@ -21,17 +21,14 @@ function HeroAnimations() {
         setIsFourthAnimationComplete(true);
     };
 
-    const divRadius = '200'
     const screenWidth = window.screen.width.valueOf()
 
     return (
-        <div className='relative flex justify-center items-center my-auto'>
-
-
+        <div className='relative flex justify-center items-center'>
             <motion.div
                 initial={{
                     scale: 2,
-                    opacity: 0
+                    opacity: 0,
                 }}
                 animate={{ rotate: 360, scale: 1, opacity: 1 }}
                 transition={{
@@ -39,14 +36,14 @@ function HeroAnimations() {
                     ease: "easeInOut",
                 }}
                 onAnimationComplete={handleFirstAnimationComplete}
-                className={`fixed h-[${divRadius}px] w-[${divRadius}px] border-l border-l-white rounded-full`}
+                className={`absolute h-[210px] w-[210px] border-l-[3px] border-l-white rounded-full`}
             />
 
             {isFirstAnimationComplete && (
                 <motion.div
                     initial={{
                         scale: 2,
-                        opacity: 0
+                        opacity: 0,
                     }}
                     animate={{ rotate: 360, scale: 1, opacity: 1 }}
                     transition={{
@@ -54,7 +51,7 @@ function HeroAnimations() {
                         ease: "easeInOut",
                     }}
                     onAnimationComplete={handleSecondAnimationComplete}
-                    className={`fixed h-[${divRadius}px] w-[${divRadius}px] border-t border-t-white rounded-full`}
+                    className={`absolute h-[210px] w-[210px] border-t-[3px] border-t-white rounded-full`}
                 />
             )}
 
@@ -62,7 +59,7 @@ function HeroAnimations() {
                 <motion.div
                     initial={{
                         scale: 2,
-                        opacity: 0
+                        opacity: 0,
                     }}
                     animate={{ rotate: 360, scale: 1, opacity: 1 }}
                     transition={{
@@ -70,7 +67,7 @@ function HeroAnimations() {
                         ease: "easeInOut",
                     }}
                     onAnimationComplete={handleThirdAnimationComplete}
-                    className={`fixed h-[${divRadius}px] w-[${divRadius}px] border-r border-r-white rounded-full`}
+                    className={`absolute h-[210px] w-[210px] border-r-[3px] border-r-white rounded-full`}
                 />
             )}
 
@@ -80,23 +77,43 @@ function HeroAnimations() {
                     animate={{ rotate: 360, opacity: 1 }}
                     transition={{ duration: 2 }}
                     onAnimationComplete={handleFourthAnimationComplete}
-                    className={`fixed h-[${divRadius}px] w-[${divRadius}px] border border-white border-b-black rounded-full`}
+                    className={`absolute h-[210px] w-[210px] z-[4] border-[10px] border-white border-b-black rounded-full`}
                 />
             )}
 
             {isFourthAnimationComplete && (
                 <>
                     <motion.div
-                        initial={{x: -screenWidth}}
-                        animate={{ x: 0 }}
-                        transition={{ duration: 2, ease: 'linear' }}
-                        className={`fixed h-[20px] w-[${screenWidth}px] border border-white border-b-black`}
+                        initial={{x: -screenWidth, skewX: 30}}
+                        animate={{ x: 0, y: 20 }}
+                        transition={{ duration: 2, ease: 'easeInOut' }}
+                        className={`absolute z-[3] h-[20px] w-[90vw] border bg-black`}
                     />
+                    <motion.div
+                        initial={{x: -50, y: -60, opacity: 0}}
+                        animate={{ x: -5, y: 0, opacity: [0, 0.3, 0.5, 1] }}
+                        transition={{ duration: 2, ease: 'easeInOut' }}
+                        className={`absolute h-[20px] w-[90vw] border bg-white`}
+                    />
+                    <motion.div
+                        initial={{x: screenWidth, skewX: -30}}
+                        animate={{ x: 0, y: -20}}
+                        transition={{ duration: 2, ease: 'easeInOut' }}
+                        className={`absolute z-[3] h-[20px] w-[90vw] border bg-gray-700`}
+                    />
+                    <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1, scale: 2 }}
+                    transition={{ duration: 2, repeat: Infinity, ease: 'easeOut', repeatType: 'reverse'}}
+                    className={`absolute h-[200px] w-[200px] border border-white rounded-full`}
+                />
                     
                 </>
-
-
             )}
+
+            <img 
+            className=' z-[5] w-[200px] h-[200px] rounded-full'
+            src='https://media.wired.com/photos/592676467034dc5f91beb80e/master/w_2560%2Cc_limit/MarkZuckerberg.jpg'/>
 
 
 
