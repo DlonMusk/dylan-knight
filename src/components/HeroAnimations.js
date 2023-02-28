@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import image from '../assets/DylanPhoto.png'
 
 function HeroAnimations() {
 
@@ -24,7 +25,7 @@ function HeroAnimations() {
     const screenWidth = window.screen.width.valueOf()
 
     return (
-        <div className='relative flex justify-center items-center'>
+        <div className='relative flex justify-center items-center max-w-7xl'>
             <motion.div
                 initial={{
                     scale: 2,
@@ -32,11 +33,11 @@ function HeroAnimations() {
                 }}
                 animate={{ rotate: 360, scale: 1, opacity: 1 }}
                 transition={{
-                    duration: 1.5,
+                    duration: 1,
                     ease: "easeInOut",
                 }}
                 onAnimationComplete={handleFirstAnimationComplete}
-                className={`absolute h-[210px] w-[210px] border-l-[3px] border-l-white rounded-full`}
+                className={`absolute  border-l-[3px] border-l-white rounded-full`}
             />
 
             {isFirstAnimationComplete && (
@@ -47,11 +48,16 @@ function HeroAnimations() {
                     }}
                     animate={{ rotate: 360, scale: 1, opacity: 1 }}
                     transition={{
-                        duration: 1.5,
+                        duration: 1,
                         ease: "easeInOut",
                     }}
                     onAnimationComplete={handleSecondAnimationComplete}
-                    className={`absolute h-[210px] w-[210px] border-t-[3px] border-t-white rounded-full`}
+                    className={`absolute border-t-[3px] border-t-white rounded-full`}
+                    style={{
+                        width: (screenWidth > 700 ? '310px': '210px'),
+                        height: (screenWidth > 700 ? '310px': '210px')
+        
+                    }}
                 />
             )}
 
@@ -63,11 +69,16 @@ function HeroAnimations() {
                     }}
                     animate={{ rotate: 360, scale: 1, opacity: 1 }}
                     transition={{
-                        duration: 1.5,
+                        duration: 1,
                         ease: "easeInOut",
                     }}
                     onAnimationComplete={handleThirdAnimationComplete}
-                    className={`absolute h-[210px] w-[210px] border-r-[3px] border-r-white rounded-full`}
+                    className={`absolute border-r-[3px] border-r-white rounded-full`}
+                    style={{
+                        width: (screenWidth > 700 ? '310px': '210px'),
+                        height: (screenWidth > 700 ? '310px': '210px')
+        
+                    }}
                 />
             )}
 
@@ -75,9 +86,14 @@ function HeroAnimations() {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ rotate: 360, opacity: 1 }}
-                    transition={{ duration: 2 }}
+                    transition={{ duration: 1.5 }}
                     onAnimationComplete={handleFourthAnimationComplete}
-                    className={`absolute h-[210px] w-[210px] z-[4] border-[10px] border-white border-b-black rounded-full`}
+                    className={`absolute  z-[4] border-[10px] border-white border-b-black rounded-full`}
+                    style={{
+                        width: (screenWidth > 700 ? '310px': '210px'),
+                        height: (screenWidth > 700 ? '310px': '210px')
+        
+                    }}
                 />
             )}
 
@@ -103,7 +119,7 @@ function HeroAnimations() {
                     />
                     <motion.div
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1, scale: 2 }}
+                    animate={{ opacity: 1, scale: (screenWidth > 700 ? 2.8 : 1.8 )}}
                     transition={{ duration: 2, repeat: Infinity, ease: 'easeOut', repeatType: 'reverse'}}
                     className={`absolute h-[200px] w-[200px] border border-white rounded-full`}
                 />
@@ -112,9 +128,13 @@ function HeroAnimations() {
             )}
 
             <img 
-            className=' z-[5] w-[200px] h-[200px] rounded-full'
-            src='https://media.wired.com/photos/592676467034dc5f91beb80e/master/w_2560%2Cc_limit/MarkZuckerberg.jpg'/>
+            className=' z-[5] rounded-full'
+                style={{
+                    width: (screenWidth > 700 ? '300px': '200px'),
+                    height: (screenWidth > 700 ? '300px': '200px')
 
+                }}
+                src={image} />
 
 
         </div>
