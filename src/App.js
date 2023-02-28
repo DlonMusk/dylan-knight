@@ -1,13 +1,16 @@
 import React from "react";
 import About from "./components/About";
+import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 
 function App() {
   
 
   return (
-    <div className="bg-[#8BC6FC] text-white snap-y h-screen snap-mandatory overflow-scroll">
+    <div className="bg-[#8BC6FC] text-white snap-y h-screen snap-mandatory overflow-scroll scrollbar scrollbar-track-gray-400">
       <Navbar />
 
       {/* {HERO} */}
@@ -16,23 +19,23 @@ function App() {
       </section>
 
       {/* {About} */}
-      <section className="snap-center" id='about'>
+      <section className="snap-center snap-always" id='about'>
         <About />
       </section>
 
       {/* {Projects} */}
-      <section className="snap-center" id='projects'>
-
+      <section className="snap-center snap-always" id='projects'>
+        <Projects />
       </section>
 
       {/* {Experience} */}
-      <section className="snap-center" id='experience'>
-
+      <section className="snap-center snap-always" id='experience'>
+        <Experience />
       </section>
 
       {/* {Contact} */}
-      <section className="snap-center" id='contact'>
-
+      <section className="snap-center snap-always" id='contact'>
+        <Contact />
       </section>
     </div>
   );
