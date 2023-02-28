@@ -21,10 +21,13 @@ function HeroAnimations() {
         setIsFourthAnimationComplete(true);
     };
 
-    const divRadius = '200px'
+    const divRadius = '200'
+    const screenWidth = window.screen.width.valueOf()
 
     return (
-        <div className='relative flex justify-center items-center'>
+        <div className='relative flex justify-center items-center my-auto'>
+
+
             <motion.div
                 initial={{
                     scale: 2,
@@ -36,7 +39,7 @@ function HeroAnimations() {
                     ease: "easeInOut",
                 }}
                 onAnimationComplete={handleFirstAnimationComplete}
-                className={`fixed h-[${divRadius}] w-[${divRadius}] border-l border-l-white rounded-full`}
+                className={`fixed h-[${divRadius}px] w-[${divRadius}px] border-l border-l-white rounded-full`}
             />
 
             {isFirstAnimationComplete && (
@@ -51,7 +54,7 @@ function HeroAnimations() {
                         ease: "easeInOut",
                     }}
                     onAnimationComplete={handleSecondAnimationComplete}
-                    className={`fixed h-[${divRadius}] w-[${divRadius}] border-t border-t-white rounded-full`}
+                    className={`fixed h-[${divRadius}px] w-[${divRadius}px] border-t border-t-white rounded-full`}
                 />
             )}
 
@@ -67,27 +70,35 @@ function HeroAnimations() {
                         ease: "easeInOut",
                     }}
                     onAnimationComplete={handleThirdAnimationComplete}
-                    className={`fixed h-[${divRadius}] w-[${divRadius}] border-r border-r-white rounded-full`}
+                    className={`fixed h-[${divRadius}px] w-[${divRadius}px] border-r border-r-white rounded-full`}
                 />
             )}
 
             {isThirdAnimationComplete && (
                 <motion.div
-                initial={{opacity: 0}}
-                animate={{ rotate: 360, opacity: 1}}
-                transition={{ duration: 2}}
-                onAnimationComplete={handleFourthAnimationComplete}
-                className={`fixed h-[${divRadius}] w-[${divRadius}] border border-white border-b-black rounded-full`}
+                    initial={{ opacity: 0 }}
+                    animate={{ rotate: 360, opacity: 1 }}
+                    transition={{ duration: 2 }}
+                    onAnimationComplete={handleFourthAnimationComplete}
+                    className={`fixed h-[${divRadius}px] w-[${divRadius}px] border border-white border-b-black rounded-full`}
                 />
             )}
 
             {isFourthAnimationComplete && (
-                <div
-                    className={`fixed h-[${divRadius}] w-[${divRadius}] border border-white border-b-black rounded-full animate-ping duration-500`}
-                />
+                <>
+                    <motion.div
+                        initial={{x: -screenWidth}}
+                        animate={{ x: 0 }}
+                        transition={{ duration: 2, ease: 'linear' }}
+                        className={`fixed h-[20px] w-[${screenWidth}px] border border-white border-b-black`}
+                    />
+                    
+                </>
+
+
             )}
 
-            
+
 
         </div>
     )
