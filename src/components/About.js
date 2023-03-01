@@ -39,7 +39,7 @@ function About() {
                 
                 initial={{ y: -200, opacity: 0, scale: 0.7 }}
                 whileInView={{ y: 0, opacity: 1, scale: 1 }}
-                transition={{ duration: 2 }}
+                transition={{ duration: 1.6 }}
                 viewport={{ once: true }}
                 className='w-[400px] p-8'
             >
