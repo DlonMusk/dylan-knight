@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react'
-import { motion, useAnimation, useInView, AnimatePresence } from 'framer-motion'
+import { motion, useAnimation, useInView, AnimatePresence, useWillChange } from 'framer-motion'
 
 function ProjectCard({ props }) {
 
     const screenWidth = window.screen.width.toFixed()
     console.log(screenWidth)
+
+    const willChange = useWillChange()
 
     const ref = useRef()
     const inView = useInView(ref, { margin: `0px -${(screenWidth / 3)}px 0px -${(screenWidth / 3)}px` })
@@ -16,7 +18,7 @@ function ProjectCard({ props }) {
         if (inView) {
             animation.start({
                 opacity: 1,
-                // scale: 1,
+                scale: 1,
                 transition: {
                     duration: 1.2
                 }
@@ -25,7 +27,7 @@ function ProjectCard({ props }) {
         else {
             animation.start({
                 opacity: 0.3,
-                // scale: 0.8,
+                scale: 0.8,
                 transition: {
                     duration: 0.8
                 }
@@ -43,8 +45,8 @@ function ProjectCard({ props }) {
         <motion.div
             initial={{ opacity: 0.3}}
             viewport={{ margin: `0px -${(screenWidth / 3)}px 0px -${(screenWidth / 3)}px` }}
-            whileInView={{ opacity: 1,}}
-            exit={{ opacity: 0.3}}
+            whileInView={{ opacity: 1}}
+            
             transition={{ duration: 1.2 }}
             onClick={() => window.open(link)}
             

@@ -8,7 +8,7 @@ function Navbar() {
   
 
   return (
-    <div className='sticky top-0 p-5 flex justify-between items-center max-w-6xl mx-auto'>
+    <div className='sticky z-[10] top-0 p-5 flex justify-between items-center max-w-6xl mx-auto'>
       <motion.div
         initial={{
           x: -300,
