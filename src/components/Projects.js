@@ -10,7 +10,7 @@ function Projects() {
       description: 'Buy and Sell Goods and Services to Locals at the Click of a Button',
       tech: ['React.js', 'MongoDB', 'TailWindCss', 'Express.js'],
       image: 'https://www.webfx.com/archive/blog/images/assets/images.sixrevisions.com/2010/04/20-05_frontpage_new_full.png',
-      link: 'www.google.com'
+      link: 'https://www.google.com'
     },
     {
       id: 1,
@@ -18,7 +18,7 @@ function Projects() {
       description: 'With all the Hype around ChatGPT I decided to Check Out the API and Build my Own',
       tech: ['TypeScript', 'OpenAI API', 'TailWindCss'],
       image: 'https://www.webfx.com/archive/blog/images/assets/images.sixrevisions.com/2010/04/20-05_frontpage_new_full.png',
-      link: 'www.google.com'
+      link: 'https://www.google.com'
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ function Projects() {
       description: 'Productivity app built for IOS and Web',
       tech: ['ReactNative.js', 'FireBase', 'TailWindCss'],
       image: 'https://www.webfx.com/archive/blog/images/assets/images.sixrevisions.com/2010/04/20-05_frontpage_new_full.png',
-      link: 'www.google.com'
+      link: 'https://www.google.com'
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ function Projects() {
       description: 'With all the Hype around ChatGPT I decided to Check Out the API and Build my Own',
       tech: ['TypeScript', 'OpenAI API', 'TailWindCss'],
       image: 'https://www.webfx.com/archive/blog/images/assets/images.sixrevisions.com/2010/04/20-05_frontpage_new_full.png',
-      link: 'www.google.com'
+      link: 'https://www.google.com'
     },
     {
       id: 4,
@@ -42,7 +42,7 @@ function Projects() {
       description: 'Productivity app built for IOS and Web',
       tech: ['ReactNative.js', 'FireBase', 'TailWindCss'],
       image: 'https://www.webfx.com/archive/blog/images/assets/images.sixrevisions.com/2010/04/20-05_frontpage_new_full.png',
-      link: 'www.google.com'
+      link: 'https://www.google.com'
     },
 
 

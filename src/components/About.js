@@ -41,7 +41,7 @@ function About() {
                 whileInView={{ y: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 1.6 }}
                 viewport={{ once: true }}
-                className='w-[400px] p-8'
+                className='w-[400px] p-8 -mt-10 sm-mt-0'
             >
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis risus arcu, et convallis massa auctor a. Mauris malesuada felis quis ipsum porta, euismod finibus metus sagittis. Aenean feugiat massa nec justo lobortis, vitae egestas ex venenatis. Mauris rutrum lacus nec felis commodo mattis. Mauris hendrerit velit ut congue varius. Nunc convallis auctor augue et faucibus. Etiam odio est, condimentum pellentesque imperdiet sed, dapibus eget nibh. Nullam dolor velit, fringilla ut mattis vel, posuere vitae ex.</p>
             </motion.div>
