@@ -18,9 +18,9 @@ exports.sendEmail = functions.https.onCall((data, context) => {
   // Send the email
   return transporter.sendMail({
     from: process.env.EMAIL,
-    to: email,
+    to: process.env.EMAIL,
     subject: `${name} - ${subject}`,
-    text: message,
+    text: `${message} sent from ${email}`,
   });
 });
 

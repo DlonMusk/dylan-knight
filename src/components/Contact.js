@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { GiPhone, GiEnvelope, GiPin } from 'react-icons/gi'
 import { getFunctions, httpsCallable } from "firebase/functions";
+import { functions } from '../firebase';
 
 
 
 function Contact() {
 
-  const EmailAuth = process.env.REACT_APP_EMAIL_PASS
-  // breaking
-  const functions = getFunctions()
+ // TODO: Make Text disapear from form when submitted, change the button to disabled if email, name and message are null
   const sendEmail = httpsCallable(functions, 'sendEmail')
 
   const {
@@ -21,7 +20,6 @@ function Contact() {
   const onSubmit = (formData) => {
     const { name, email, subject, message } = formData
     console.log(formData)
-    //breaking
     sendEmail({name: name, email: email, subject: subject, message: message })
     .then(() => console.log("THANK YOU FOR REACHING OUT"))
     .catch(err => console.error(err))
@@ -46,7 +44,6 @@ function Contact() {
 
   const handleEmailState = (event) => {
     if (event.target.value.length !== 0) {
-      console.log(event.target.value.length)
       setEmailEmpty(false)
     }
     else {
