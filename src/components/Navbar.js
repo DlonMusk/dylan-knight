@@ -48,7 +48,7 @@ function Navbar() {
             onClick={() => window.location.href = '#contact'}
             className='cursor-pointer'
           />
-          <a href='#contact' className='text-[#434854] font-mono hidden sm:inline-flex md:text-xl'>Get In Touch</a>
+          <a href='#contact' className='text-[#434854] font-mono hidden lg:inline-flex md:text-xl'>Get In Touch</a>
         </div>
       </motion.div>
       <Menu />

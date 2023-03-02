@@ -15,7 +15,7 @@ function Hero() {
       <HeroAnimations />
 
       <div className='z-[5]'>
-        <h2 className='text-sm uppercase sm:tracking-[15px] tracking-[10px] '>
+        <h2 className='text-sm md:text-md uppercase md:tracking-[17px] tracking-[10px] '>
           Software Engineer
         </h2>
         <h1 className='sm:text-[3rem] mt-5 text-xl text-[#434854b9] font-mono'>

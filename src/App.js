@@ -6,8 +6,10 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 
+
+// sendEmail({"name": "bob", "email": "knight777@hotmail.ca", "subject": "please work", "message": "this is taking way longer than it should"})
+
 function App() {
-  
 
   return (
     <div 

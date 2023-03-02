@@ -27,10 +27,10 @@ function Menu() {
                 }}
                 className='sm:w-54 md:space-x-[30px] lg:space-x-[50px] flex-col mr-5 md:mr-0 md:flex-row  hidden sm:inline-flex font-mono tracking-[3px]'
             >
-                <a href='#about' className=' hover:scale-125 hover:text-[#434854] transition-all duration-500'>About</a>
-                <a href='#projects' className=' hover:scale-125 hover:text-[#434854] transition-all duration-500'>Projects</a>
-                <a href='#experience' className=' hover:scale-125 hover:text-[#434854] transition-all duration-500'>Experience</a>
-                <a href='#algo-expert' className=' hover:scale-125 hover:text-[#434854] transition-all duration-500'>Algo Expert</a>
+                <a href='#about' className='hover:scale-125 hover:text-[#434854] transition-all duration-500'>About</a>
+                <a href='#projects' className='hover:scale-125 hover:text-[#434854] transition-all duration-500'>Projects</a>
+                <a href='#experience' className='hover:scale-125 hover:text-[#434854] transition-all duration-500'>Experience</a>
+                <a href='#algo-expert' className='hover:scale-125 hover:text-[#434854] transition-all duration-500'>Algo Expert</a>
                 {/* ADD SLIDING UNDERLINE */}
 
             </motion.div>
