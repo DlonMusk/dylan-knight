@@ -33,11 +33,16 @@ function HeroAnimations() {
                 }}
                 animate={{ rotate: 360, scale: 1, opacity: 1 }}
                 transition={{
-                    duration: 1,
+                    duration: 0.6,
                     ease: "easeInOut",
                 }}
                 onAnimationComplete={handleFirstAnimationComplete}
                 className={`absolute  border-l-[3px] border-l-white rounded-full`}
+                style={{
+                    width: (screenWidth > 700 ? '310px': '210px'),
+                    height: (screenWidth > 700 ? '310px': '210px')
+    
+                }}
             />
 
             {isFirstAnimationComplete && (
@@ -48,7 +53,7 @@ function HeroAnimations() {
                     }}
                     animate={{ rotate: 360, scale: 1, opacity: 1 }}
                     transition={{
-                        duration: 1,
+                        duration: 0.6,
                         ease: "easeInOut",
                     }}
                     onAnimationComplete={handleSecondAnimationComplete}
@@ -69,7 +74,7 @@ function HeroAnimations() {
                     }}
                     animate={{ rotate: 360, scale: 1, opacity: 1 }}
                     transition={{
-                        duration: 1,
+                        duration: 0.6,
                         ease: "easeInOut",
                     }}
                     onAnimationComplete={handleThirdAnimationComplete}
@@ -86,7 +91,7 @@ function HeroAnimations() {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ rotate: 360, opacity: 1 }}
-                    transition={{ duration: 1.5 }}
+                    transition={{ duration: 1 }}
                     onAnimationComplete={handleFourthAnimationComplete}
                     className={`absolute  z-[4] border-[10px] border-white border-b-black rounded-full`}
                     style={{
@@ -103,26 +108,26 @@ function HeroAnimations() {
                         initial={{x: -screenWidth, skewX: 30}}
                         animate={{ x: 0, y: 20 }}
                         transition={{ duration: 2, ease: 'easeInOut' }}
-                        className={`absolute z-[3] h-[20px] w-[90vw] border bg-black`}
+                        className={`absolute z-[3] h-[20px] w-[90vw] border bg-black max-w-7xl`}
                     />
                     <motion.div
                         initial={{x: -50, y: -60, opacity: 0}}
                         animate={{ x: -5, y: 0, opacity: [0, 0.3, 0.5, 1] }}
                         transition={{ duration: 2, ease: 'easeInOut' }}
-                        className={`absolute h-[20px] w-[90vw] border bg-white`}
+                        className={`absolute h-[20px] w-[90vw] border bg-white max-w-7xl`}
                     />
                     <motion.div
                         initial={{x: screenWidth, skewX: -30}}
                         animate={{ x: 0, y: -20}}
                         transition={{ duration: 2, ease: 'easeInOut' }}
-                        className={`absolute z-[3] h-[20px] w-[90vw] border bg-gray-700`}
+                        className={`absolute z-[3] h-[20px] w-[90vw] border bg-gray-700 max-w-7xl`}
                     />
                     <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1, scale: (screenWidth > 700 ? 2.8 : 1.8 )}}
-                    transition={{ duration: 2, repeat: Infinity, ease: 'easeOut', repeatType: 'reverse'}}
-                    className={`absolute h-[200px] w-[200px] border border-white rounded-full`}
-                />
+                    initial={{ opacity: (screenWidth > 700 ? 0 : 1 ), scale: (screenWidth > 700 ? 1 : 0.8 ) }}
+                    animate={{ opacity: (screenWidth > 700 ? 1 : 0 ), scale: (screenWidth > 700 ? 2.8 : 1.8 )}}
+                    transition={{ duration: 2, repeat: Infinity, ease: 'easeOut', repeatType: (screenWidth > 700 ? 'reverse' : 'loop' )}}
+                    className={`absolute h-[200px] w-[200px] border border-white ${(screenWidth > 700 ? '' : 'border-b-black' )} rounded-full z-[0]`}
+                    />
                     
                 </>
             )}
@@ -134,7 +139,7 @@ function HeroAnimations() {
                     height: (screenWidth > 700 ? '300px': '200px')
 
                 }}
-                src={image} />
+                src={image} alt='Profile'/>
 
 
         </div>

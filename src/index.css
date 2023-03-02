@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .contactInput {
+    @apply outline-none bg-white rounded-md border-b border-l px-6 py-4 border-gray-400  text-gray-600 placeholder-gray-500 transition-all 
+    focus:outline-[#ffffff] hover:outline-[#ffffff54] 
+  }
+}
+
 * {
   margin: 0
 }
