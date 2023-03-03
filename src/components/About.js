@@ -13,14 +13,14 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
             className='relative h-screen flex flex-col text-center md:text-left md:flex-row justify-evenly items-center max-w-7xl mx-auto'>
-            <h3 className='absolute top-20 sm:top-40 uppercase tracking-[15px] text-xl md:text-2xl'>ABOUT</h3>
+            <h3 className='absolute top-24 sm:top-40 uppercase tracking-[15px] text-xl md:text-2xl'>ABOUT</h3>
 
             <div className='flex justify-center items-center -mb-[45px]'>
                 <motion.img
                     
                     initial={{ y: -30, x: -100, opacity: 0.4, scale: 0.7 }}
                     whileInView={{ y: 0, x: 0, opacity: 1, scale: 1 }}
-                    transition={{ duration: 2 }}
+                    transition={{ duration: 1.2 }}
                     viewport={{ once: true }}
                     className='z-[5] w-[200px] h-[200px] md:w-[400px] md:h-[400px] xl:w-[500px] xl:h-[500px] rounded-full md:rounded-none mt-20 md:mt-0 '
                     src={image}
@@ -29,7 +29,7 @@ function About() {
                 <motion.div
                     initial={{ y: 30, x: -100, opacity: 0, scale: 0.7 }}
                     whileInView={{ y: -10, x: -10, opacity: 1, scale: 1 }}
-                    transition={{ duration: 2 }}
+                    transition={{ duration: 1.2 }}
                     viewport={{ once: true }}
                     className='w-[200px] h-[200px] md:w-[400px] md:h-[400px] xl:w-[500px] xl:h-[500px] rounded-full md:rounded-none bg-white absolute mt-20 md:mt-0'
                 />
@@ -39,7 +39,7 @@ function About() {
                 
                 initial={{ y: -200, opacity: 0, scale: 0.7 }}
                 whileInView={{ y: 0, opacity: 1, scale: 1 }}
-                transition={{ duration: 1.6 }}
+                transition={{ duration: 1.2 }}
                 viewport={{ once: true }}
                 className='w-[400px] lg:w-[500px] p-8 -mt-10 sm-mt-0 md:text-xl'
             >

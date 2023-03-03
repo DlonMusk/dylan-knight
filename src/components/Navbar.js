@@ -8,7 +8,7 @@ function Navbar() {
 
 
   return (
-    <div className='sticky z-[10] top-0 p-5 flex justify-between items-center max-w-3xl md:max-w-4xl lg:max-w-6xl xl:max-w-[90rem] mx-auto'>
+    <div className='sticky z-[10] top-5 sm:top-0 p-5 flex justify-between items-center max-w-3xl md:max-w-4xl lg:max-w-6xl xl:max-w-[90rem] mx-auto'>
       <motion.div
         initial={{
           x: -300,
@@ -21,14 +21,14 @@ function Navbar() {
           scale: 1
         }}
         transition={{
-          duration: 1.8
+          duration: 1
         }}
         className='flex flex-row items-center space-x-2'
       >
         <SocialIcon
           style={{
-            width: '4rem',
-            height: '4rem'
+            width: '3rem',
+            height: '3rem'
           }}
           url='https://github.com/DlonMusk'
           fgColor='#434854'
@@ -39,8 +39,8 @@ function Navbar() {
         <div className='flex items-center transition-all duration-500 hover:opacity-50'>
           <SocialIcon
             style={{
-              width: '4rem',
-              height: '4rem'
+              width: '3rem',
+              height: '3rem'
             }}
             network='email'
             fgColor='#434854'

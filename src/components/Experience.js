@@ -11,13 +11,13 @@ function Experience() {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
             className='relative h-screen flex flex-col text-center md:text-left md:flex-row justify-center lg:justify-evenly items-center max-w-7xl mx-auto space-y-6'>
-            <h3 className='absolute top-20 sm:top-40 uppercase tracking-[15px] text-xl md:text-2xl'>Experience</h3>
+            <h3 className='absolute top-24 sm:top-40 uppercase tracking-[15px] text-xl md:text-2xl'>Experience</h3>
 
             <motion.div
                 
                 initial={{ y: 200, opacity: 0, scale: 0.7 }}
                 whileInView={{ y: 0, opacity: 1, scale: 1 }}
-                transition={{ duration: 1.6 }}
+                transition={{ duration: 1.2 }}
                 viewport={{ once: true }}
                 className='w-[400px] lg:w-[500px] p-8 md:text-xl space-y-2 sm:space-y-6 '
             >
@@ -38,7 +38,7 @@ function Experience() {
                     
                     initial={{ y: 30, x: 100, opacity: 0.4, scale: 0.7 }}
                     whileInView={{ y: 0, x: 0, opacity: 0.8, scale: 1 }}
-                    transition={{ duration: 2 }}
+                    transition={{ duration: 1.2 }}
                     viewport={{ once: true }}
                     className='z-[5] w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] rounded-full md:rounded-none  flex-shrink-0'
                     src={TactysLogo}
@@ -47,7 +47,7 @@ function Experience() {
                 <motion.div
                     initial={{ y: 30, x: 130, opacity: 0, scale: 0.7 }}
                     whileInView={{ y: -15, x: -15, opacity: 1, scale: 1 }}
-                    transition={{ duration: 2 }}
+                    transition={{ duration: 1.2 }}
                     viewport={{ once: true }}
                     className='w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] rounded-full bg-white absolute '
                 />

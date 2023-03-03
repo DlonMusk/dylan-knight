@@ -4,7 +4,7 @@
 
 @layer components {
   .contactInput {
-    @apply outline-none bg-[#ffffffae] rounded-md shadow-2xl px-6 py-4 border-gray-400  text-gray-600 placeholder-gray-500 transition-all 
+    @apply outline-none bg-[#ffffffae] rounded-md sm:shadow-2xl px-6 sm:py-4 py-3 border-gray-400  text-gray-600 placeholder-gray-500 transition-all 
     focus:outline-[#ffffff] focus:bg-[#ffffffe1] hover:outline-[#ffffff54] 
   }
 }

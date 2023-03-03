@@ -33,7 +33,7 @@ function HeroAnimations() {
                 }}
                 animate={{ rotate: 360, scale: 1, opacity: 1 }}
                 transition={{
-                    duration: 0.6,
+                    duration: 0.4,
                     ease: "easeInOut",
                 }}
                 onAnimationComplete={handleFirstAnimationComplete}
@@ -53,7 +53,7 @@ function HeroAnimations() {
                     }}
                     animate={{ rotate: 360, scale: 1, opacity: 1 }}
                     transition={{
-                        duration: 0.6,
+                        duration: 0.4,
                         ease: "easeInOut",
                     }}
                     onAnimationComplete={handleSecondAnimationComplete}
@@ -74,7 +74,7 @@ function HeroAnimations() {
                     }}
                     animate={{ rotate: 360, scale: 1, opacity: 1 }}
                     transition={{
-                        duration: 0.6,
+                        duration: 0.4,
                         ease: "easeInOut",
                     }}
                     onAnimationComplete={handleThirdAnimationComplete}
@@ -91,7 +91,7 @@ function HeroAnimations() {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ rotate: 360, opacity: 1 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 0.8 }}
                     onAnimationComplete={handleFourthAnimationComplete}
                     className={`absolute  z-[4] border-[10px] border-white border-b-black rounded-full`}
                     style={{
@@ -107,19 +107,19 @@ function HeroAnimations() {
                     <motion.div
                         initial={{x: -screenWidth, skewX: 30}}
                         animate={{ x: 0, y: 20 }}
-                        transition={{ duration: 2, ease: 'easeInOut' }}
+                        transition={{ duration: 1.5, ease: 'easeInOut' }}
                         className={`absolute z-[3] h-[20px] w-[90vw] border bg-black max-w-7xl`}
                     />
                     <motion.div
                         initial={{x: -50, y: -60, opacity: 0}}
                         animate={{ x: -5, y: 0, opacity: [0, 0.3, 0.5, 1] }}
-                        transition={{ duration: 2, ease: 'easeInOut' }}
+                        transition={{ duration: 1.5, ease: 'easeInOut' }}
                         className={`absolute h-[20px] w-[90vw] border bg-white max-w-7xl`}
                     />
                     <motion.div
                         initial={{x: screenWidth, skewX: -30}}
                         animate={{ x: 0, y: -20}}
-                        transition={{ duration: 2, ease: 'easeInOut' }}
+                        transition={{ duration: 1.5, ease: 'easeInOut' }}
                         className={`absolute z-[3] h-[20px] w-[90vw] border bg-gray-700 max-w-7xl`}
                     />
                     <motion.div
