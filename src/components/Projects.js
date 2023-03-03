@@ -58,7 +58,7 @@ function Projects() {
       transition={{ duration: 2 }}
       viewport={{ once: true }}
       className='h-screen relative flex justify-evenly items-center text-left overflow-hidden max-w-full flex-col sm:flex-row mx-auto px-10'>
-      <h3 className='absolute sm:top-40 top-24 uppercase tracking-[15px] text-xl md:text-2xl'>Projects</h3>
+      <h3 className='absolute sm:top-40 top-20 uppercase tracking-[15px] text-xl md:text-2xl'>Projects</h3>
 
       <div style={{
         paddingLeft: screenWidth / 2,

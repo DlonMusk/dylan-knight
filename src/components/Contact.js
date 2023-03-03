@@ -105,7 +105,7 @@ function Contact() {
       transition={{ duration: 1.2 }}
       viewport={{ once: true }}
       className='relative h-screen flex flex-col sm:justify-center justify-end items-center space-y-8 sm:pb-0 pb-20'>
-      <h3 className='absolute top-24 sm:top-40 uppercase tracking-[15px] text-xl md:text-2xl'>Contact</h3>
+      <h3 className='absolute top-20 sm:top-40 uppercase tracking-[15px] text-xl md:text-2xl'>Contact</h3>
 
 
       <div className=' flex flex-col items-center space-y-2 sm:space-y-10 mx-10 top-40'>

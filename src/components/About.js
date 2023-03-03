@@ -13,7 +13,7 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
             className='relative h-screen flex flex-col text-center md:text-left md:flex-row justify-evenly items-center max-w-7xl mx-auto'>
-            <h3 className='absolute top-24 sm:top-40 uppercase tracking-[15px] text-xl md:text-2xl'>ABOUT</h3>
+            <h3 className='absolute top-20 sm:top-40 uppercase tracking-[15px] text-xl md:text-2xl'>ABOUT</h3>
 
             <div className='flex justify-center items-center -mb-[45px]'>
                 <motion.img
