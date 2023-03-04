@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { GiPhone, GiEnvelope, GiShakingHands } from 'react-icons/gi'
 import { ImLocation } from 'react-icons/im'
@@ -36,7 +36,6 @@ function Contact() {
   const [formComplete, setFormComplete] = useState(false)
   const [emailSent, setEmailSent] = useState(false)
   const [emailValid, setEmailValid] = useState(true)
-  const [userEmail, setUserEmail] = useState('')
 
   
 
@@ -94,6 +93,8 @@ function Contact() {
   }, [emailValid, nameEmpty, emailEmpty, messageEmpty])
 
 
+
+
   return (
     <motion.div
       initial={{
@@ -104,7 +105,7 @@ function Contact() {
       }}
       transition={{ duration: 1.2 }}
       viewport={{ once: true }}
-      className='relative h-screen flex flex-col justify-center items-center space-y-8 overflow-hidden'>
+      className='relative h-screen flex flex-col justify-center items-center space-y-8 max-h-screen overscroll-hidden'>
       <h3 className='absolute top-24 md:top-40 uppercase tracking-[15px] text-xl md:text-2xl'>Contact</h3>
 
 
@@ -147,7 +148,7 @@ function Contact() {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className='flex flex-col space-y-2 w-fit h-fit overflow-hidden'>
+          className='flex flex-col space-y-2 w-fit'>
           <div className='flex flex-col space-y-2 sm:space-y-0 sm:space-x-2 sm:flex-row'>
             {/* name */}
             {/* email */}
@@ -162,9 +163,6 @@ function Contact() {
           <textarea {...register('message')} className={`contactInput h-[100px] sm:h-[200px] ${messageEmpty ? '' : 'bg-[#ffffffe1]'}`} placeholder='Message' onChange={handleMessageState}></textarea>
 
           <button disabled={!formComplete} className={`contactInput bg-[#ffffff69] ${formComplete ? 'bg-[#ffffffe1]' : 'hover:outline-none'} border-none transition-all`} type='submit'>SUBMIT</button>
-
-
-          
 
         </form>}
 
