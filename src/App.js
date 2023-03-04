@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div 
-    className="bg-[#8BC6FC] text-white snap-y h-screen snap-mandatory overflow-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#434854]">
+    className="bg-[#8BC6FC] text-white snap-y h-screen w-screen snap-mandatory  scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#434854]">
       <Navbar />
 
       {/* {HERO} */}

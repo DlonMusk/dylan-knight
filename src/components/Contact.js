@@ -104,11 +104,11 @@ function Contact() {
       }}
       transition={{ duration: 1.2 }}
       viewport={{ once: true }}
-      className='relative h-screen flex flex-col sm:justify-center justify-end items-center space-y-8 sm:pb-0 pb-20'>
-      <h3 className='absolute top-20 sm:top-40 uppercase tracking-[15px] text-xl md:text-2xl'>Contact</h3>
+      className='relative h-screen flex flex-col justify-center items-center space-y-8 overflow-hidden'>
+      <h3 className='absolute top-24 md:top-40 uppercase tracking-[15px] text-xl md:text-2xl'>Contact</h3>
 
 
-      <div className=' flex flex-col items-center space-y-2 sm:space-y-10 mx-10 top-40'>
+      <div className=' flex flex-col items-center space-y-2 sm:space-y-10 mx-10'>
         {/* Message */}
         {/* TODO: Make this type out */}
         <h4 className='uppercase text-2xl text-center lg:text-4xl font-mono'>If you made it this far, lets chat!</h4>
@@ -132,7 +132,6 @@ function Contact() {
             <p className='sm:text-2xl text-lg'>London, Ontario, Canada</p>
           </div>
         </div>
-
       </div>
 
       {emailSent ? (
@@ -148,7 +147,7 @@ function Contact() {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className='flex flex-col space-y-2 w-fit'>
+          className='flex flex-col space-y-2 w-fit h-fit overflow-hidden'>
           <div className='flex flex-col space-y-2 sm:space-y-0 sm:space-x-2 sm:flex-row'>
             {/* name */}
             {/* email */}
@@ -160,15 +159,16 @@ function Contact() {
           <input {...register('subject')} className={`contactInput ${subjectEmpty ? '' : 'bg-[#ffffffe1]'}`} type='text' placeholder='Subject' onChange={handleSubjectState}></input>
 
           {/* message */}
-          <textarea {...register('message')} className={`contactInput h-[150px] sm:h-[200px] ${messageEmpty ? '' : 'bg-[#ffffffe1]'} resize-none`} placeholder='Message' onChange={handleMessageState}></textarea>
+          <textarea {...register('message')} className={`contactInput h-[100px] sm:h-[200px] ${messageEmpty ? '' : 'bg-[#ffffffe1]'}`} placeholder='Message' onChange={handleMessageState}></textarea>
 
           <button disabled={!formComplete} className={`contactInput bg-[#ffffff69] ${formComplete ? 'bg-[#ffffffe1]' : 'hover:outline-none'} border-none transition-all`} type='submit'>SUBMIT</button>
 
 
-          <h1 className='text-center lg:p-10 uppercase text-2xl '>THANKS FOR VISITING</h1>
+          
 
         </form>}
 
+        <h1 className='hidden md:inline-block text-center lg:p-2 uppercase text-2xl '>THANKS FOR VISITING</h1>
 
 
     </motion.div>

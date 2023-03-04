@@ -125,7 +125,7 @@ function HeroAnimations() {
                     <motion.div
                     initial={{ opacity: (screenWidth > 700 ? 0 : 1 ), scale: (screenWidth > 700 ? 1 : 0.8 ) }}
                     animate={{ opacity: (screenWidth > 700 ? 1 : 0 ), scale: (screenWidth > 700 ? 2.8 : 1.8 )}}
-                    transition={{ duration: 2, repeat: Infinity, ease: 'easeOut', repeatType: (screenWidth > 700 ? 'reverse' : 'loop' )}}
+                    transition={{ duration: 2, repeat: Infinity, ease: 'easeIn', repeatType: (screenWidth > 700 ? 'reverse' : 'loop' )}}
                     className={`absolute h-[200px] w-[200px] border border-white ${(screenWidth > 700 ? '' : 'border-b-black' )} rounded-full z-[0]`}
                     />
                     
