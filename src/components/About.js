@@ -13,11 +13,11 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
             className='relative h-screen flex flex-col text-center md:text-left md:flex-row justify-evenly items-center max-w-7xl mx-auto'>
-            <h3 className='absolute top-24 md:top-40 uppercase tracking-[15px] text-xl md:text-2xl'>ABOUT</h3>
+            <h3 className='absolute top-20 3xl:top-32 uppercase tracking-[15px] text-xl md:text-2xl'>ABOUT</h3>
 
             <div className='flex justify-center items-center -mb-[45px]'>
                 <motion.img
-                    
+
                     initial={{ y: -30, x: -100, opacity: 0.4, scale: 0.7 }}
                     whileInView={{ y: 0, x: 0, opacity: 1, scale: 1 }}
                     transition={{ duration: 1.2 }}
@@ -36,14 +36,22 @@ function About() {
             </div>
 
             <motion.div
-                
+
                 initial={{ y: -200, opacity: 0, scale: 0.7 }}
                 whileInView={{ y: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 1.2 }}
                 viewport={{ once: true }}
-                className='w-[400px] lg:w-[500px] p-8 -mt-10 sm-mt-0 md:text-xl'
+                className='w-[400px] lg:w-[600px] p-8 -mt-10 sm:mt-0 md:text-xl'
             >
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis risus arcu, et convallis massa auctor a. Mauris malesuada felis quis ipsum porta, euismod finibus metus sagittis. Aenean feugiat massa nec justo lobortis, vitae egestas ex venenatis. Mauris rutrum lacus nec felis commodo mattis. Mauris hendrerit velit ut congue varius. Nunc convallis auctor augue et faucibus. Etiam odio est, condimentum pellentesque imperdiet sed, dapibus eget nibh. Nullam dolor velit, fringilla ut mattis vel, posuere vitae ex.</p>
+                <div className='space-y-3 text-[13px] sm:text-[19px] sm:space-y-8'>
+                    <p className=''>
+                        Throughout my life, I have always found great joy in problem-solving, being imaginative, and building. My passion for these activities was first ignited at the age of 7, when I received a Lego set named "The Knights Kingdom". The process of meticulously following the instructions and building the final product filled me with a sense of happiness. I relished the opportunity to diverge from the prescribed format and add my own creative touch to the design. This experience instilled in me a deep realization that I thrive in structured environments that also allow for ample room for creativity.
+                    </p>
+
+                    <p className=''>
+                        As I look towards the future, I am eager to become part of a team that shares my passion for cutting-edge technology, has a clear vision of how to enhance the end-user experience, and values structured imagination. I believe that my skills and drive would be best utilized in an environment that allows me to leverage my strengths and contribute towards a common goal.
+                    </p>
+                </div>
             </motion.div>
         </motion.div>
     )

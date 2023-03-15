@@ -105,32 +105,32 @@ function Contact() {
       }}
       transition={{ duration: 1.2 }}
       viewport={{ once: true }}
-      className='relative h-screen flex flex-col justify-center items-center space-y-8 max-h-screen overscroll-hidden'>
-      <h3 className='absolute top-24 md:top-40 uppercase tracking-[15px] text-xl md:text-2xl'>Contact</h3>
+      className='relative h-screen flex flex-col justify-center items-center gap-y-8 max-h-screen overscroll-hidden'>
+      <h3 className='absolute top-20 3xl:top-32 uppercase tracking-[15px] text-xl md:text-2xl'>Contact</h3>
 
 
-      <div className=' flex flex-col items-center space-y-2 sm:space-y-10 mx-10'>
+      <div className=' flex flex-col  items-center mx-10 sm:mt-[50px]'>
         {/* Message */}
-        {/* TODO: Make this type out */}
-        <h4 className='uppercase text-2xl text-center lg:text-4xl font-mono'>If you made it this far, lets chat!</h4>
-        <div className='space-y-3 sm:space-y-8 text-left'>
+        
+        <h4 className='uppercase text-2xl text-center xl:text-3xl font-mono mb-5'>If you made it this far, lets chat!</h4>
+        <div className='space-y-3 sm:space-y-5 text-left'>
           {/* Phone Number */}
           <div className='flex pr-5 sm:pr-7 items-center justify-center sm:tracking-[3px] space-x-2'>
             <GiPhone className='h-5 w-5 sm:h-7 sm:w-7' />
-            <p className='sm:text-2xl text-lg'>226 962 4207</p>
+            <p className='xl:text-2xl text-lg'>226 962 4207</p>
           </div>
 
           <div className='flex pr-5 sm:pr-7 items-center justify-center sm:tracking-[3px] space-x-2'>
             {/* Email */}
-            {/* TODO: Make clickable? */}
+            
             <GiEnvelope className='h-5 w-5 sm:h-7 sm:w-7' />
-            <p className='sm:text-2xl text-lg'>knight777@hotmail.ca</p>
+            <p className='xl:text-2xl text-lg'>knight777@hotmail.ca</p>
           </div>
 
           <div className='flex pr-5 sm:pr-7 items-center justify-center sm:tracking-[3px] space-x-2'>
             {/* Location */}
             <ImLocation className='h-5 w-5 sm:h-7 sm:w-7' />
-            <p className='sm:text-2xl text-lg'>London, Ontario, Canada</p>
+            <p className='xl:text-2xl text-lg'>London, Ontario, Canada</p>
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@ function Contact() {
           <input {...register('subject')} className={`contactInput ${subjectEmpty ? '' : 'bg-[#ffffffe1]'}`} type='text' placeholder='Subject' onChange={handleSubjectState}></input>
 
           {/* message */}
-          <textarea {...register('message')} className={`contactInput h-[100px] sm:h-[200px] ${messageEmpty ? '' : 'bg-[#ffffffe1]'}`} placeholder='Message' onChange={handleMessageState}></textarea>
+          <textarea {...register('message')} className={`contactInput h-[100px] 3xl:h-[200px] ${messageEmpty ? '' : 'bg-[#ffffffe1]'}`} placeholder='Message' onChange={handleMessageState}></textarea>
 
           <button disabled={!formComplete} className={`contactInput bg-[#ffffff69] ${formComplete ? 'bg-[#ffffffe1]' : 'hover:outline-none'} border-none transition-all`} type='submit'>SUBMIT</button>
 
